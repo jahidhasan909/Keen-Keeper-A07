@@ -8,7 +8,7 @@ import { FaChartLine } from 'react-icons/fa';
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm px-20">
+            <div className="navbar fixed z-50 bg-base-100 shadow-sm px-20">
                 <div className="flex-1">
                     <img src={logo} alt="" className='w-32 h-7' />
                 </div>

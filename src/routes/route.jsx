@@ -4,6 +4,7 @@ import MainLayout from '../MainLayout/MainLayout';
 import HomePage from '../pages/HomePage/HomePage';
 import TimeLine from '../pages/TimeLine/TimeLine';
 import Stats from '../pages/Stats/Stats';
+import ErrorElement from '../Components/ErrorElement/ErrorElement';
 
 const route = createBrowserRouter([
     {
@@ -13,7 +14,8 @@ const route = createBrowserRouter([
             { index: true, Component: HomePage },
             { path: '/timeline', Component: TimeLine },
             { path: '/stats', Component: Stats }
-        ]
+        ],
+        errorElement: <ErrorElement></ErrorElement>
     }
 ])
 
