@@ -1,9 +1,10 @@
 import React from 'react';
+import Banner from '../../Components/HeroBanner/Banner';
 
 const HomePage = () => {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className=' container mx-auto'>
+            <Banner></Banner>
         </div>
     );
 };
