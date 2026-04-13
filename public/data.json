@@ -1,0 +1,172 @@
+[
+    {
+        "id": 1,
+        "name": "David Kim",
+        "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+        "email": "david.kim@email.com",
+        "days_since_contact": 18,
+        "status": "overdue",
+        "tags": [
+            "work",
+            "startup"
+        ],
+        "bio": "Former coworker from my first startup. We usually discuss tech ideas and product launches.",
+        "goal": 14,
+        "next_due_date": "2025-07-10",
+        "interaction_this_month": 0,
+        "priority": "need attention"
+    },
+    {
+        "id": 2,
+        "name": "Emma Wilson",
+        "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+        "email": "emma.wilson@email.com",
+        "days_since_contact": 10,
+        "status": "almost due",
+        "tags": [
+            "family",
+            "cousin"
+        ],
+        "bio": "My cousin who lives in Toronto. We catch up about family news and travel plans.",
+        "goal": 14,
+        "next_due_date": "2025-07-18",
+        "interaction_this_month": 1,
+        "priority": "interactions this month"
+    },
+    {
+        "id": 3,
+        "name": "Lisa Nakamura",
+        "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+        "email": "lisa.nakamura@email.com",
+        "days_since_contact": 5,
+        "status": "on-track",
+        "tags": [
+            "work",
+            "design"
+        ],
+        "bio": "Product designer I collaborate with on side projects and UI design experiments.",
+        "goal": 14,
+        "next_due_date": "2025-07-25",
+        "interaction_this_month": 2,
+        "priority": "on-track"
+    },
+    {
+        "id": 4,
+        "name": "James Wright",
+        "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+        "email": "james.wright@email.com",
+        "days_since_contact": 15,
+        "status": "almost due",
+        "tags": [
+            "travel",
+            "hobby"
+        ],
+        "bio": "Travel buddy from a backpacking trip in Thailand. We share photography tips.",
+        "goal": 14,
+        "next_due_date": "2025-07-16",
+        "interaction_this_month": 1,
+        "priority": "need attention"
+    },
+    {
+        "id": 5,
+        "name": "Sophia Martinez",
+        "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+        "email": "sophia.m@email.com",
+        "days_since_contact": 3,
+        "status": "on-track",
+        "tags": [
+            "college",
+            "close friend"
+        ],
+        "bio": "Met during university orientation. We still talk about career growth and books.",
+        "goal": 14,
+        "next_due_date": "2025-07-28",
+        "interaction_this_month": 3,
+        "priority": "interactions this month"
+    },
+    {
+        "id": 6,
+        "name": "Daniel Thompson",
+        "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+        "email": "daniel.t@email.com",
+        "days_since_contact": 21,
+        "status": "overdue",
+        "tags": [
+            "gym",
+            "fitness"
+        ],
+        "bio": "Workout partner from the local gym. We motivate each other to stay consistent.",
+        "goal": 14,
+        "next_due_date": "2025-07-05",
+        "interaction_this_month": 0,
+        "priority": "need attention"
+    },
+    {
+        "id": 7,
+        "name": "Aisha Rahman",
+        "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+        "email": "aisha.rahman@email.com",
+        "days_since_contact": 7,
+        "status": "on-track",
+        "tags": [
+            "school",
+            "debate club"
+        ],
+        "bio": "Friend from high school debate club. We like discussing social issues and books.",
+        "goal": 14,
+        "next_due_date": "2025-07-22",
+        "interaction_this_month": 2,
+        "priority": "on-track"
+    },
+    {
+        "id": 8,
+        "name": "Michael Chen",
+        "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+        "email": "michael.chen@email.com",
+        "days_since_contact": 13,
+        "status": "almost due",
+        "tags": [
+            "developer",
+            "tech"
+        ],
+        "bio": "Met at a developer conference. We exchange ideas about React, Next.js, and startups.",
+        "goal": 14,
+        "next_due_date": "2025-07-17",
+        "interaction_this_month": 1,
+        "priority": "interactions this month"
+    },
+    {
+        "id": 9,
+        "name": "Olivia Parker",
+        "picture": "https://randomuser.me/api/portraits/women/33.jpg",
+        "email": "olivia.parker@email.com",
+        "days_since_contact": 16,
+        "status": "overdue",
+        "tags": [
+            "art",
+            "photography"
+        ],
+        "bio": "Photographer friend I met during a creative workshop. We often plan photo walks.",
+        "goal": 14,
+        "next_due_date": "2025-07-12",
+        "interaction_this_month": 0,
+        "priority": "need attention"
+    },
+    {
+        "id": 10,
+        "name": "Rahim Ahmed",
+        "picture": "https://randomuser.me/api/portraits/men/22.jpg",
+        "email": "rahim.ahmed@email.com",
+        "days_since_contact": 6,
+        "status": "on-track",
+        "tags": [
+            "college",
+            "football"
+        ],
+        "bio": "College friend who loves football and weekend hangouts. We usually watch Premier League matches together.",
+        "goal": 14,
+        "next_due_date": "2025-07-26",
+        "interaction_this_month": 2,
+        "priority": "on-track"
+    }
+]
