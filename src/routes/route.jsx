@@ -5,6 +5,7 @@ import HomePage from '../pages/HomePage/HomePage';
 import TimeLine from '../pages/TimeLine/TimeLine';
 import Stats from '../pages/Stats/Stats';
 import ErrorElement from '../Components/ErrorElement/ErrorElement';
+import DetailPage from '../pages/DetailsPage/DetailPage';
 
 const route = createBrowserRouter([
     {
@@ -13,7 +14,12 @@ const route = createBrowserRouter([
         children: [
             { index: true, Component: HomePage },
             { path: '/timeline', Component: TimeLine },
-            { path: '/stats', Component: Stats }
+            { path: '/stats', Component: Stats },
+            {
+                path: '/details/:id',
+                Component: DetailPage,
+                loader: () => fetch(`/data.json`)
+            }
         ],
         errorElement: <ErrorElement></ErrorElement>
     }
