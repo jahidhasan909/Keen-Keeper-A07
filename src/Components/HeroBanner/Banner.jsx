@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { use } from 'react';
 import { FaPlus } from 'react-icons/fa';
 
-const Banner = () => {
+const Banner = ({ contectDataLoad }) => {
+    const contectdata = use(contectDataLoad);
+
+
+
+
+
     return (
         <div>
             <div className='text-center space-y-4 mt-40'>
@@ -13,19 +19,19 @@ const Banner = () => {
 
             <div className='grid grid-cols-4 justify-center gap-6 my-10'>
                 <div className=' h-32 shadow-md text-center flex flex-col items-center justify-center rounded-md bg-base-100'>
-                    <h4 className='font-semibold text-xl'>10</h4>
+                    <h4 className='font-semibold text-xl'>{contectdata.length}</h4>
                     <p className='text-[#64748B]'>Total Friends</p>
                 </div>
                 <div className=' h-32 shadow-md text-center flex flex-col items-center justify-center rounded-md bg-base-100'>
-                    <h4 className='font-semibold text-xl'>3</h4>
+                    <h4 className='font-semibold text-xl'>{contectdata.filter(item => item.priority === 'on-track').length}</h4>
                     <p className='text-[#64748B]'>On Track</p>
                 </div>
                 <div className=' h-32 shadow-md text-center flex flex-col items-center justify-center rounded-md bg-base-100'>
-                    <h4 className='font-semibold text-xl'>6</h4>
+                    <h4 className='font-semibold text-xl'>{contectdata.filter(item => item.priority === 'need attention').length}</h4>
                     <p className='text-[#64748B]'>Need Attention</p>
                 </div>
                 <div className=' h-32 shadow-md text-center flex flex-col items-center justify-center rounded-md bg-base-100'>
-                    <h4 className='font-semibold text-xl'>12</h4>
+                    <h4 className='font-semibold text-xl'>{contectdata.filter(item => item.priority === 'interactions this month').length}</h4>
                     <p className='text-[#64748B]'>Interactions This Month</p>
                 </div>
             </div>

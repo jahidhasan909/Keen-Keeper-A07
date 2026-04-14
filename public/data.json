@@ -13,7 +13,8 @@
         "bio": "Former coworker from my first startup. We usually discuss tech ideas and product launches.",
         "goal": 30,
         "relationship_goal": "30",
-        "next_due_date": "2026-02-27"
+        "next_due_date": "2026-02-27",
+        "priority": "need attention"
     },
     {
         "id": 2,
@@ -29,7 +30,8 @@
         "bio": "My cousin who lives in Toronto. We catch up about family news and travel plans.",
         "goal": 20,
         "relationship_goal": "20",
-        "next_due_date": "2026-03-05"
+        "next_due_date": "2026-03-05",
+        "priority": "interactions this month"
     },
     {
         "id": 3,
@@ -45,7 +47,8 @@
         "bio": "Product designer I collaborate with on UI side projects.",
         "goal": 15,
         "relationship_goal": "15",
-        "next_due_date": "2026-03-15"
+        "next_due_date": "2026-03-15",
+         "priority": "on-track"
     },
     {
         "id": 4,
@@ -61,7 +64,8 @@
         "bio": "Travel buddy from a backpacking trip in Thailand.",
         "goal": 25,
         "relationship_goal": "25",
-        "next_due_date": "2026-03-01"
+        "next_due_date": "2026-03-01",
+        "priority": "need attention"
     },
     {
         "id": 5,
@@ -77,7 +81,8 @@
         "bio": "Met during university orientation. We still talk about books and career.",
         "goal": 20,
         "relationship_goal": "20",
-        "next_due_date": "2026-03-20"
+        "next_due_date": "2026-03-20",
+        "priority": "on-track"
     },
     {
         "id": 6,
@@ -93,7 +98,8 @@
         "bio": "Workout partner from the local gym.",
         "goal": 14,
         "relationship_goal": "14",
-        "next_due_date": "2026-02-25"
+        "next_due_date": "2026-02-25",
+         "priority": "need attention"
     },
     {
         "id": 7,
@@ -109,7 +115,8 @@
         "bio": "Friend from high school debate club.",
         "goal": 18,
         "relationship_goal": "18",
-        "next_due_date": "2026-03-10"
+        "next_due_date": "2026-03-10",
+        "priority": "on-track"
     },
     {
         "id": 8,
@@ -125,7 +132,8 @@
         "bio": "Met at a developer conference. We discuss React and startups.",
         "goal": 22,
         "relationship_goal": "22",
-        "next_due_date": "2026-03-03"
+        "next_due_date": "2026-03-03",
+        "priority": "interactions this month"
     },
     {
         "id": 9,
@@ -141,7 +149,8 @@
         "bio": "Photographer friend from a creative workshop.",
         "goal": 20,
         "relationship_goal": "20",
-        "next_due_date": "2026-02-28"
+        "next_due_date": "2026-02-28",
+         "priority": "need attention"
     },
     {
         "id": 10,
@@ -157,6 +166,7 @@
         "bio": "College friend who loves football and weekend hangouts.",
         "goal": 20,
         "relationship_goal": "20",
-        "next_due_date": "2026-03-12"
+        "next_due_date": "2026-03-12",
+         "priority": "on-track"
     }
 ]
