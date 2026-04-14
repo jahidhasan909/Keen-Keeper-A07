@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaArchive } from 'react-icons/fa';
 import { IoCallOutline, IoVideocamOutline } from 'react-icons/io5';
 import { MdDelete, MdOutlineTextsms } from 'react-icons/md';
 import { RiNotificationSnoozeFill } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
+import { TimeLineContect } from '../../Context/ContectContect';
+
+
 
 const DetailPage = () => {
+
     const params = useParams();
     const contectload = useLoaderData();
 
     const excetedContect = contectload.find(contect => contect.id == params.id)
 
-    console.log(excetedContect.name, 'ex');
+   
+    const { timeLineContect, setTimeLineContect } = useContext(TimeLineContect)
+
+
+    const handleAddedCallTimeline = () => {
+        setTimeLineContect([
+            { ...excetedContect, 
+                status: 'call' },
+                 ...timeLineContect])
+
+    }
+    const handleAddedTextTimeline = () => {
+        setTimeLineContect([
+            { ...excetedContect, status: 'text' }, ...timeLineContect])
+
+    }
+    const handleAddedVideoTimeline = () => {
+        setTimeLineContect([{ ...excetedContect, status: 'video' }, ...timeLineContect])
+
+    }
+
 
 
     return (
@@ -30,11 +54,17 @@ const DetailPage = () => {
 
 
                     </div>
-                    <div className='space-y-2'>
-                        <p className='shadow-sm flex items-center rounded-sm bg-base-100 justify-center p-2 gap-1'><RiNotificationSnoozeFill /> Snooze 2 weeks</p>
+                    <div className='space-y-2 flex flex-col'>
+                        <button className='btn bg-base-100'>
+                            <p className=' flex items-center  justify-center p-2 gap-1 '><RiNotificationSnoozeFill /> Snooze 2 weeks</p>
+                        </button>
+                        <button className='btn bg-base-100'>
 
-                        <p className='shadow-sm flex items-center rounded-sm bg-base-100 justify-center p-2 gap-1'><FaArchive /> Archive</p>
-                        <p className='shadow-sm flex items-center rounded-sm bg-base-100 justify-center p-2 gap-1 text-red-400' ><MdDelete /> Delete</p>
+                            <p className=' flex items-center   justify-center p-2 gap-1'><FaArchive /> Archive</p>
+                        </button>
+                        <button className='btn bg-base-100'>
+                            <p className=' flex items-center  justify-center p-2 gap-1 text-red-400' ><MdDelete /> Delete</p>
+                        </button>
                     </div>
                 </div>
 
@@ -66,9 +96,9 @@ const DetailPage = () => {
                     <div className='bg-base-100 shadow-sm rounded-sm h-36 flex flex-col  justify-center p-7 space-y-2'>
                         <h3 className='text-xl'>Quick Check-In</h3>
                         <div className='flex gap-2'>
-                            <button className='btn w-[190px] h-20'><span className='flex flex-col items-center text-[1.10rem]'><IoCallOutline /> Call</span></button>
-                            <button className='btn w-[190px] h-20'><span className='flex flex-col items-center text-[1.10rem]'><MdOutlineTextsms /> Text</span></button>
-                            <button className='btn w-[190px] h-20'><span className='flex flex-col items-center text-[1.10rem]'><IoVideocamOutline />
+                            <button onClick={handleAddedCallTimeline} className='btn w-[190px] h-20'><span className='flex flex-col items-center text-[1.10rem]'><IoCallOutline /> Call</span></button>
+                            <button onClick={handleAddedTextTimeline} className='btn w-[190px] h-20'><span className='flex flex-col items-center text-[1.10rem]'><MdOutlineTextsms /> Text</span></button>
+                            <button onClick={handleAddedVideoTimeline} className='btn w-[190px] h-20'><span className='flex flex-col items-center text-[1.10rem]'><IoVideocamOutline />
                                 Video</span></button>
                         </div>
                     </div>

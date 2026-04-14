@@ -10,12 +10,12 @@ const ContectCard = ({ contectDataLoad }) => {
             <h1 className='font-bold mb-4 text-xl'>Your Friends</h1>
             <div className='grid grid-cols-4 gap-3'>
                 {
-                    concentData.map(info => <Link to={`/details/${info.id}`} className='bg-base-100 shadow-sm flex flex-col items-center rounded-md p-6 space-y-2' key={info.id}>
+                    concentData.map(info => <Link to={`/details/${info.id}`} className='bg-base-100 shadow-sm flex flex-col items-center rounded-md p-6 space-y-2 hover:shadow-sm  hover:shadow-[#244D3F]' key={info.id}>
                         <img className=' rounded-full w-20' src={info.picture} alt={info.name} />
                         <h1 className='font-semibold'>{info.name}</h1>
                         <p className='text-neutral/50'>{info.days_since_contact}d ago</p>
-                        <div>{info.tags.map((tag, index) => <p key={index} className='badge bg-green-100 text-green-800'>{tag}</p>)}</div>
-                        <p className={`badge ${info.status === "almost due" ? "bg-orange-400 text-white" : info.status === "overdue" ? "bg-red-500 text-white" : "bg-green-950 text-white"}`}>{info.status}</p>
+                        <div>{info.tags.map((tag, index) => <p key={index} className='badge rounded-full bg-[#CBFADB] text-[#244D3F]'>{tag}</p>)}</div>
+                        <p className={`badge rounded-full ${info.status === "almost due" ? "bg-[#EFAD44] text-white" : info.status === "overdue" ? "bg-[#EF4444] text-white" : "bg-[#244D3F] text-white"}`}>{info.status}</p>
 
                     </Link>)
 
