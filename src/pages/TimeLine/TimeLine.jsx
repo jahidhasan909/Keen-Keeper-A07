@@ -1,6 +1,6 @@
 
 import { FaAngleDown } from 'react-icons/fa';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import textIcon from '../../assets/text.png'
 import callIcon from '../../assets/call.png'
 import videoIcon from '../../assets/video.png'
@@ -17,6 +17,11 @@ const TimeLine = () => {
     }
 
     const { timeLineContect } = useContext(TimeLineContect)
+    const [search, setSearch] = useState('')
+    
+
+    const filterSearch = timeLineContect.filter(contect => contect.name.toLowerCase().includes(search.toLowerCase()))
+
 
 
     return (
@@ -34,19 +39,24 @@ const TimeLine = () => {
                 </div>
 
                 <div>
-                    <input type="search" placeholder="Search" className="input w-32" />
+                    <input type="search"
+                        value={search}
+                        onChange={(e) =>
+                            setSearch(e.target.value)}
+                        placeholder="Search"
+                        className="input w-32" />
                 </div>
 
             </div>
 
 
             {
-                timeLineContect.length === 0 ?
+                filterSearch.length === 0 ?
                     <div className='text-center text-neutral/50 bg-base-100 shadow-sm rounded-sm py-20'>
                         <p>No contacts yet!</p>
                     </div> :
 
-                    timeLineContect.map(contect =>
+                    filterSearch.map(contect =>
                         <div className='' key={contect.id}>
 
                             {contect.status === 'call' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
