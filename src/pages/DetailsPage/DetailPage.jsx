@@ -5,6 +5,7 @@ import { MdDelete, MdOutlineTextsms } from 'react-icons/md';
 import { RiNotificationSnoozeFill } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
 import { TimeLineContect } from '../../Context/ContectContect';
+import { toast } from 'react-toastify';
 
 
 
@@ -15,31 +16,35 @@ const DetailPage = () => {
 
     const excetedContect = contectload.find(contect => contect.id == params.id)
 
-   
+
     const { timeLineContect, setTimeLineContect } = useContext(TimeLineContect)
 
 
     const handleAddedCallTimeline = () => {
         setTimeLineContect([
-            { ...excetedContect, 
-                status: 'call' },
-                 ...timeLineContect])
+            {
+                ...excetedContect,
+                status: 'call'
+            },
+            ...timeLineContect])
+        toast.success(`Call With ${excetedContect.name}`)
 
     }
     const handleAddedTextTimeline = () => {
         setTimeLineContect([
             { ...excetedContect, status: 'text' }, ...timeLineContect])
+        toast.success(`Text With ${excetedContect.name}`)
 
     }
     const handleAddedVideoTimeline = () => {
         setTimeLineContect([{ ...excetedContect, status: 'video' }, ...timeLineContect])
-
+        toast.success(`Video With ${excetedContect.name}`)
     }
 
 
 
     return (
-        <div className='mt-40 mb-20 container mx-auto'>
+        <div className='mt-40 mb-24 container mx-auto'>
             <div className='grid grid-cols-2 gap-5'>
                 <div className='space-y-2'>
                     <div className='bg-base-100 shadow-sm flex flex-col items-center rounded-md p-6 space-y-2'>

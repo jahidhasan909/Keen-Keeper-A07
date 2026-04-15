@@ -59,8 +59,8 @@ const TimeLine = () => {
 
             {
                 fillterbytext.length === 0 ?
-                    <div className='text-center text-neutral/50 bg-base-100 shadow-sm rounded-sm py-20'>
-                        <p>No contacts yet!</p>
+                    <div className='text-center text-neutral/50 bg-base-100 shadow-sm rounded-sm py-40'>
+                        <p>No interaction data yet!</p>
                     </div> :
 
                     fillterbytext.map(contect =>

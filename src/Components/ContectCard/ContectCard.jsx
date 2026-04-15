@@ -6,7 +6,7 @@ const ContectCard = ({ contectDataLoad }) => {
 
 
     return (
-        <div className='mb-20'>
+        <div className='mb-24'>
             <h1 className='font-bold mb-4 text-xl'>Your Friends</h1>
             <div className='grid grid-cols-4 gap-3'>
                 {
