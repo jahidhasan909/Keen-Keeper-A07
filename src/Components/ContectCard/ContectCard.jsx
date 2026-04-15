@@ -8,7 +8,7 @@ const ContectCard = ({ contectDataLoad }) => {
     return (
         <div className='mb-24'>
             <h1 className='font-bold mb-4 text-xl'>Your Friends</h1>
-            <div className='grid grid-cols-4 gap-3'>
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3'>
                 {
                     concentData.map(info => <Link to={`/details/${info.id}`} className='bg-base-100 shadow-sm flex flex-col items-center rounded-md p-6 space-y-2 hover:shadow-sm  hover:shadow-[#244D3F]' key={info.id}>
                         <img className=' rounded-full w-20' src={info.picture} alt={info.name} />

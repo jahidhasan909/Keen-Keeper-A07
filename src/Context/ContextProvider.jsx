@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { TimeLineContect } from './ContectContect';
 
 
@@ -7,10 +7,13 @@ const ContextProvider = ({ children }) => {
 
 
     const [timeLineContect, setTimeLineContect] = useState([])
+    const [loading,setLoading]=useState(false)
 
     const data = {
         timeLineContect,
-        setTimeLineContect
+        setTimeLineContect,
+        loading,
+        setLoading
     }
 
     return <TimeLineContect.Provider value={data}>

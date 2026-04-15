@@ -36,7 +36,7 @@ const TimeLine = () => {
         <div className='container mx-auto mt-40 mb-20'>
             <h1 className='text-3xl font-semibold'>Timeline</h1>
             <div className='flex items-center justify-between my-6'>
-                <div className="dropdown dropdown-end">
+                <div className="dropdown  md:dropdown-right">
                     <div tabIndex={0} role="button" className="btn m-1 text-neutral/50">Filter by <FaAngleDown /></div>
                     <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                         <li onClick={() => setSortText('text')}><a>Filter by text</a></li>

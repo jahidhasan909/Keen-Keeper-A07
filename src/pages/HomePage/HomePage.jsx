@@ -15,7 +15,7 @@ const contectData = async () => {
 const HomePage = () => {
     const contectDataLoad = contectData()
     return (
-        <div className=' container mx-auto'>
+        <div className='container mx-auto'>
             <Suspense fallback={<div className='flex justify-center items-center min-h-screen'><RingLoader color='#244D3F' /></div>}>
                 <Banner contectDataLoad={contectDataLoad}></Banner>
             </Suspense>

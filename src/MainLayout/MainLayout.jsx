@@ -5,12 +5,10 @@ import Footer from '../Components/Shared/Footer/Footer';
 import { RingLoader } from 'react-spinners';
 
 
-
-
-
-
-
 const MainLayout = () => {
+
+ 
+
 
 
     return (
