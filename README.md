@@ -1,16 +1,48 @@
-# React + Vite
+Project Name: Keen Keeper
+                                                                                      
+Short Description: Keen Keeper একটি কনট্যাক্ট ম্যানেজমেন্ট অ্যাপ, যেখানে ইউজাররা বন্ধু বা পরিচিত মানুষের কনট্যাক্ট ডিটেইলস সংরক্ষণ করতে পারে এবং টেক্সট, কল ও ভিডিও যোগাযোগের তারিখসহ হিস্ট্রি ট্র্যাক করতে পারে। এছাড়াও একটি স্ট্যাটস/ফ্লোচার্ট সেকশন রয়েছে যেখানে বিভিন্ন ধরনের যোগাযোগের সংখ্যা দেখা যায় 
+                                                                                       
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technologies:
+*React.js
+*React Router DOM
+*Tailwind CSS
+*Daisyui
+*Recharts
+*React toastify  
+                                                                                      
 
-Currently, two official plugins are available:
+ 3 key features : 
+ 1. Contact Details & Interaction System:                                     
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+হোম পেজে কনট্যাক্টগুলো কার্ড আকারে দেখানো হয়।
+কোনো কার্ডে ক্লিক করলে ডিটেইলস পেজে নিয়ে যায়।
+ডিটেইলস পেজে থাকে:              
 
-## React Compiler
+* Call Button
+* Text Button
+* Video Button                 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+যেকোনো বাটনে ক্লিক করলে toast notification দেখায় এবং সেই interaction টাইমলাইনে যোগ হয় React Context API ব্যবহার করে।                                  
 
-## Expanding the ESLint configuration
+2.Timeline Management System:
+টাইমলাইন পেজে সব interaction history (call, text, video) দেখা যায়।
+ফিচারগুলো:                            
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Search by name
+* Sort by Call
+* Sort by Text
+* Sort by Video                        
+
+সব sorting ও filtering logic centralized ভাবে context state দিয়ে manage করা হয়েছে।        
+
+3. Analytics / Flowchart Dashboard:                        
+
+স্ট্যাটস পেজে পুরো অ্যাপের activity visualization করা হয়।
+এখানে দেখা যায়:                    
+
+* Total Calls count
+* Total Text count
+* Total Video count                
+
+সব ডাটা flowchart  আকারে দেখানো হয়, যাতে user সহজে বুঝতে পারে তাদের communication activity।                                                                                     
