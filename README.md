@@ -30,9 +30,9 @@ Technologies:
 ফিচারগুলো:                            
 
 * Search by name
-* Sort by Call
-* Sort by Text
-* Sort by Video                        
+* filter by Call
+* filter by Text
+* filter by Video                        
 
 সব sorting ও filtering logic centralized ভাবে context state দিয়ে manage করা হয়েছে।        
 

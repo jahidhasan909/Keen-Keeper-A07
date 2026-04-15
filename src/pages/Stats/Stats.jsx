@@ -8,9 +8,9 @@ const Stats = () => {
 
     const { timeLineContect } = useContext(TimeLineContect)
 
-    const fillterContectByText = timeLineContect.filter(contect => contect.status === 'text').length
-    const fillterContectByCall = timeLineContect.filter(contect => contect.status === 'call').length
-    const fillterContectByVideo = timeLineContect.filter(contect => contect.status === 'video').length
+    const fillterContectByText = timeLineContect.filter(contect => contect.contectstatus === 'textcontect').length
+    const fillterContectByCall = timeLineContect.filter(contect => contect.contectstatus === 'callcontect').length
+    const fillterContectByVideo = timeLineContect.filter(contect => contect.contectstatus === 'videocontect').length
 
 
     const data = [

@@ -24,7 +24,9 @@ const DetailPage = () => {
         setTimeLineContect([
             {
                 ...excetedContect,
-                status: 'call'
+                contectstatus: 'callcontect',
+                id: Math.random()
+
             },
             ...timeLineContect])
         toast.success(`Call With ${excetedContect.name}`)
@@ -32,12 +34,18 @@ const DetailPage = () => {
     }
     const handleAddedTextTimeline = () => {
         setTimeLineContect([
-            { ...excetedContect, status: 'text' }, ...timeLineContect])
+            { ...excetedContect, 
+                contectstatus: 'textcontect', 
+                id: Math.random()},
+                 ...timeLineContect])
         toast.success(`Text With ${excetedContect.name}`)
 
     }
     const handleAddedVideoTimeline = () => {
-        setTimeLineContect([{ ...excetedContect, status: 'video' }, ...timeLineContect])
+        setTimeLineContect([{ ...excetedContect,
+             contectstatus: 'videocontect', 
+             id: Math.random() },
+              ...timeLineContect])
         toast.success(`Video With ${excetedContect.name}`)
     }
 
@@ -98,7 +106,7 @@ const DetailPage = () => {
                         <button className='btn'>Edit</button>
                     </div>
 
-                    <div className='bg-base-100 shadow-sm rounded-sm p-3 md:p-5  lg:p-6 space-y-2 '>
+                    <div className='bg-base-100 shadow-sm rounded-sm md:p-5  lg:p-6 space-y-2 '>
                         <h3 className='text-center md:text-start lg:text-start lg:text-xl'>Quick Check-In</h3>
                         <div className='flex flex-col justify-center items-center  lg:grid md:grid md:grid-cols-2 lg:grid-cols-3 gap-2 '>
                             <button onClick={handleAddedCallTimeline} className='btn w-[190px] h-20'><span className='flex flex-col items-center text-[1.10rem]'><IoCallOutline /> Call</span></button>

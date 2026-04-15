@@ -19,17 +19,16 @@ const TimeLine = () => {
     const { timeLineContect } = useContext(TimeLineContect)
     const [search, setSearch] = useState('')
 
+    const [fillterType, setfilletType] = useState('')
 
     const filterSearch = timeLineContect.filter(contect => contect.name.toLowerCase().includes(search.toLowerCase()))
 
 
-    const [fillterType, setfilletType] = useState('')
     let fillterby = [...filterSearch]
 
     if (fillterType) {
-        fillterby = fillterby.filter(contect => contect.status == fillterType)
+        fillterby = fillterby.filter(contect => contect.contectstatus == fillterType)
     }
-
 
 
     return (
@@ -39,9 +38,9 @@ const TimeLine = () => {
                 <div className="dropdown  md:dropdown-right">
                     <div tabIndex={0} role="button" className="btn m-1 text-neutral/50">Filter by <FaAngleDown /></div>
                     <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                        <li onClick={() => setfilletType('text')}><a>Filter by text</a></li>
-                        <li onClick={() => setfilletType('call')}><a>Filter by call</a></li>
-                        <li onClick={() => setfilletType('video')}><a>Filter by video</a></li>
+                        <li onClick={() => setfilletType('textcontect')}><a>Filter by text</a></li>
+                        <li onClick={() => setfilletType('callcontect')}><a>Filter by call</a></li>
+                        <li onClick={() => setfilletType('videocontect')}><a>Filter by video</a></li>
                     </ul>
                 </div>
 
@@ -66,7 +65,7 @@ const TimeLine = () => {
                     fillterby.map(contect =>
                         <div className='' key={contect.id}>
 
-                            {contect.status === 'call' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
+                            {contect.contectstatus === 'callcontect' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
                                 <img className='w-10 h-10' src={callIcon} alt="" />
                                 <div className='space-1-2'>
                                     <h2><span className='font-semibold text-[1.10rem]'>Call</span> <span className='text-neutral/50'>With {contect.name}</span></h2>
@@ -76,7 +75,7 @@ const TimeLine = () => {
 
 
 
-                            {contect.status === 'text' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
+                            {contect.contectstatus === 'textcontect' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
                                 <img className='w-10 h-10' src={textIcon} alt="" />
                                 <div className='space-1-2'>
                                     <h2><span className='font-semibold text-[1.10rem]'>Text</span> <span className='text-neutral/50'>With {contect.name}</span></h2>
@@ -85,7 +84,7 @@ const TimeLine = () => {
                             </div>)}
 
 
-                            {contect.status === 'video' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
+                            {contect.contectstatus === 'videocontect' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
                                 <img className='w-10 h-10' src={videoIcon} alt="" />
                                 <div className='space-1-2'>
                                     <h2><span className='font-semibold text-[1.10rem]'>Video</span> <span className='text-neutral/50'>With {contect.name}</span></h2>
@@ -94,6 +93,8 @@ const TimeLine = () => {
                             </div>)}
                         </div>)
             }
+
+
         </div>
     );
 };
