@@ -23,12 +23,13 @@ const TimeLine = () => {
     const filterSearch = timeLineContect.filter(contect => contect.name.toLowerCase().includes(search.toLowerCase()))
 
 
-    const [sortType, setSortType] = useState('')
-    const fillterbySort = [...filterSearch]
+    const [fillterType, setfilletType] = useState('')
+    let fillterby = [...filterSearch]
 
-    if (sortType) {
-        fillterbySort.sort((a, b) => (b.status === sortType) - (a.status === sortType));
+    if (fillterType) {
+        fillterby = fillterby.filter(contect => contect.status == fillterType)
     }
+
 
 
     return (
@@ -38,9 +39,9 @@ const TimeLine = () => {
                 <div className="dropdown  md:dropdown-right">
                     <div tabIndex={0} role="button" className="btn m-1 text-neutral/50">Filter by <FaAngleDown /></div>
                     <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                        <li onClick={() => setSortType('text')}><a>Filter by text</a></li>
-                        <li onClick={() => setSortType('call')}><a>Filter by call</a></li>
-                        <li onClick={() => setSortType('video')}><a>Filter by video</a></li>
+                        <li onClick={() => setfilletType('text')}><a>Filter by text</a></li>
+                        <li onClick={() => setfilletType('call')}><a>Filter by call</a></li>
+                        <li onClick={() => setfilletType('video')}><a>Filter by video</a></li>
                     </ul>
                 </div>
 
@@ -57,12 +58,12 @@ const TimeLine = () => {
 
 
             {
-                fillterbySort.length === 0 ?
+                fillterby.length === 0 ?
                     <div className='text-center text-neutral/50 bg-base-100 shadow-sm rounded-sm py-40'>
                         <p>No interaction data yet!</p>
                     </div> :
 
-                    fillterbySort.map(contect =>
+                    fillterby.map(contect =>
                         <div className='' key={contect.id}>
 
                             {contect.status === 'call' && (<div className='flex gap-2 bg-base-100 shadow-sm py-4 px-4 items-center rounded-sm mb-2' key={contect.id}>
